@@ -27,6 +27,14 @@ $box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25)
     &__content-container
         display: flex  
         position: relative
+    &__first-ring
+        position: absolute
+        top: 120px
+        right: 0px
+    &__second-ring
+        position: absolute
+        bottom: 65px
+        right: -75px
     
 .nav-menu
     &__list
@@ -99,7 +107,7 @@ $box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25)
 .right-wrapper
     position: absolute
     width: 320px
-    right: 0
+    right: 80px
     top: 125px
     &__text
         font-size: 16px
@@ -119,6 +127,7 @@ $box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25)
         box-shadow: $box-shadow
         cursor: pointer
         margin-right: 30px
+        //padding: 11px 24px 11px 24px
         &:hover
             background-color: #ef7b51
     &__icon-btn
@@ -127,8 +136,30 @@ $box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25)
         img
             margin-right: 15px
             cursor: pointer
+            transition: .3s all
             &:hover
                 transform: scale(110%)
-                transition: .3s all
     &__text
         font-size: 16px
+
+.ring
+    display: flex
+    justify-content: center
+    align-items: center
+    height: 194px
+    width: 194px
+    border-radius: 50%
+    background-image: linear-gradient(144deg, #ed7a508a 0%, #4889ea8a 54%, #2C2C2C8a 100%)
+    &_big
+        height: 285px
+        width: 285px
+        &::before   
+            height: 188px
+            width: 188px
+    &::before
+        display: block
+        content: ""
+        height: 130px
+        width: 130px
+        background-color: $background-color
+        border-radius: 50%
