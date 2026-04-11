@@ -48,6 +48,19 @@ $box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25)
   list-style-type: none
   a
    text-decoration: none
+   color: black
+   position: relative
+   &::before
+    content: ""
+    height: 100%
+    width: 0
+    border-bottom: 2px solid black
+    position: absolute
+    top: 0
+    left: 0
+    transition: .5s all
+   &:hover::before
+    width: 100%
 
 .left-wrapper
   position: relative
@@ -84,7 +97,12 @@ $box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25)
   &__img
     position: relative
     width: 880px
-  
+
+//  bq st
+i
+  transition: .3s all
+// bq nd
+
 .icons
   display: flex
   gap: 17px
@@ -97,6 +115,7 @@ $box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25)
     justify-content: center
     align-items: center
     cursor: pointer
+    transition: 0.3s all  //bq
   &__item:hover
     box-shadow: $box-shadow
     i
@@ -206,6 +225,10 @@ $box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25)
     display: flex
     align-items: flex-end
     box-shadow: $box-shadow
+    transition: .4s all
+    &:hover
+      transform: scale(104%)
+      transform: rotate3d(1, 1, 1, 35deg) //bq
     &_grey
         background-color: $color-grey
     &_orange
