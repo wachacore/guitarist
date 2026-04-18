@@ -181,7 +181,7 @@ i
     border-radius: 50%
   &_white
     &::before
-    background-color: white
+      background-color: white
   &_big
     height: 285px
     width: 285px
@@ -192,10 +192,10 @@ i
 
 .section-courses
   min-height: 700px
-  position: relative
   overflow: hidden
   &__container
     padding-top: 30px
+    position: relative;
   &__title
     padding-bottom: 40px
   &__cards-box
@@ -207,13 +207,13 @@ i
     justify-content: space-evenly
   &__first-ring
     position: absolute
-    top: 356px
-    left: 305px
+    top: 357px //380px
+    left: -74px //-100px
     z-index: -1
   &__second-ring
     position: absolute
-    top: 45px
-    right: 325px
+    top: 60px  //60px
+    right: -55px //-90px
     z-index: -1
 
 
@@ -254,3 +254,30 @@ i
         span
             font-size: 48px
             font-weight: 600
+
+
+.section-learning
+  min-height: 700px
+  background: $background-color
+  overflow: hidden
+  &__container
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__right-wrapper
+    max-width: 500px
+    position: relative
+  &__left-wrapper
+    position: relative
+  &__first-ring
+    position: absolute
+    top: 140px //140px
+    left: 285px //285px
+  &__second-ring
+    position: absolute
+    top: -115px //-120px
+    right: -470px //-300px
+  &__text
+    font-weight: 400
+    font-size: 18
+    line-height: auto 
