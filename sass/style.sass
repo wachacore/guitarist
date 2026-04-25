@@ -9,6 +9,19 @@ $color-grey: #E2E2E2
 $background-color: #F0F0F0
 $box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25)
 
+@font-face 
+  font-family: Montserrat-Regular 
+  src: url(../fonts/Montserrat-Regular.ttf)
+  font-weight: normal
+  
+@font-face 
+  font-family: Montserrat-Semibold 
+  src: url(../fonts/Montserrat-SemiBold.ttf)
+  font-weight: bold
+
+body
+  font-family: Montserrat-Regular
+
 .container
  max-width: 1140px
  margin: 0 auto
@@ -50,6 +63,7 @@ $box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25)
    text-decoration: none
    color: black
    position: relative
+   font-family: Montserrat-SemiBold
    &::before
     content: ""
     height: 100%
@@ -98,11 +112,6 @@ $box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25)
     position: relative
     width: 880px
 
-//  bq st
-i
-  transition: .3s all
-// bq nd
-
 .icons
   display: flex
   gap: 17px
@@ -118,16 +127,18 @@ i
     transition: 0.3s all  //bq
   &__item:hover
     box-shadow: $box-shadow
-    i
-      font-size: 21px
+    transform: scale(120%)
+  i
+    font-size: 21px
+    transition: .3s all
 
 .title
   font-size: 72px
-  font-weight: 700
+  font-family: Montserrat-SemiBold
 
 .right-wrapper
   position: absolute
-  width: 320px
+  width: 360px
   right: 80px
   top: 125px
   &__text
@@ -138,8 +149,8 @@ i
 .buttons
   display: flex
   &__main-btn
-    height: 60px
-    width: 200px
+    height: 60px // text width mb 152px
+    width: 200px // text height mb 38px
     color: white
     font-size: 18px
     font-weight: 700
@@ -152,6 +163,7 @@ i
     transition: .3s all
     &:hover
       background-color: #ef7b51
+      transform: scale(105%) //bq
   &__icon-btn
     display: flex
     align-items: center
@@ -207,7 +219,7 @@ i
     justify-content: space-evenly
   &__first-ring
     position: absolute
-    top: 357px //380px
+    top: 362px //380px
     left: -74px //-100px
     z-index: -1
   &__second-ring
@@ -253,31 +265,61 @@ i
         font-size: 18px
         span
             font-size: 48px
-            font-weight: 600
-
+            font-family: Montserrat-SemiBold
 
 .section-learning
-  min-height: 700px
+  min-height: 630px
   background: $background-color
   overflow: hidden
   &__container
     display: flex
     justify-content: space-between
     align-items: center
+    padding-top: 50px
   &__right-wrapper
     max-width: 500px
     position: relative
-  &__left-wrapper
+    .title
+      line-height: 105%
+      margin-bottom: 20px
+  &__left-wrapper  //317px left fo left title
     position: relative
+    .title
+      position: relative
+      z-index: 2
+      left: 155px
   &__first-ring
     position: absolute
-    top: 140px //140px
-    left: 285px //285px
+    top: -120px 
+    left: 100px 
   &__second-ring
     position: absolute
-    top: -115px //-120px
+    top: -120px
     right: -470px //-300px
   &__text
     font-weight: 400
     font-size: 18
-    line-height: auto 
+    line-height: auto
+    margin-bottom: 30px 
+  &__img
+    left: 0
+    position: absolute
+    top: -25px
+    z-index: 1
+
+.footer
+  position: relative
+  &__container
+    min-height: 272px
+    display: flex
+    justify-content: flex-end
+    align-items: center
+  &__img
+    position: absolute
+    left: 0
+    bottom: 0
+  &__wrapper
+    width: 50%
+  &__title
+    line-height: 105%
+    margin-bottom: 20px
